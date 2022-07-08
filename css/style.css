@@ -6,11 +6,21 @@
   --primery-background-color-section: #f5f4fa;
   --color-footer-header: #2f303a;
   --background-color-btn: #188ce8;
+  --card-sed-gap: 30px;
+  --items: 3;
 }
 /*другий колір тексту #757575/*/
 /*білий колір bgc/ --#FFFFFF*/
 /* accent-- #2196F3*/
 /*Основний колір текста-- #212121*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: Roboto, sans-serif;
@@ -28,6 +38,21 @@ address {
 }
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 .visually-hidden {
   position: absolute;
@@ -41,9 +66,33 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /*Навігація header*/
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  margin-right: auto;
+}
 .logo {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  margin-right: 93px;
   color: var(--title-text-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -53,7 +102,15 @@ ul {
 .colortext {
   color: var(--accent-color);
 }
+.site-nav {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -69,6 +126,9 @@ ul {
 }
 
 .adress-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primery-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -79,20 +139,32 @@ ul {
 .adress-list .link:focus {
   color: var(--accent-color);
 }
+.adress-list {
+  display: flex;
+}
+.link-mail {
+  margin-right: 50px;
+}
+
 /*Hero*/
 .hero {
   background-color: var(--color-footer-header);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
   color: var(--primery-bgc-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
   background-color: var(--accent-color);
   font-family: inherit;
   color: var(--primery-bgc-color);
@@ -100,9 +172,7 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
-  align-items: center;
-  text-align: center;
+
   letter-spacing: 0.06em;
 }
 .button:hover,
@@ -110,8 +180,13 @@ ul {
   background-color: var(--background-color-btn);
 }
 /*Features*/
-
+.features-list {
+  display: flex;
+  gap: 30px;
+}
 .features-list .title {
+  flex-basis: 270px;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -120,6 +195,7 @@ ul {
   text-transform: uppercase;
 }
 .features-list .text {
+  width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -127,6 +203,7 @@ ul {
 /*Section work*/
 .work-title,
 .team-title {
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -134,11 +211,25 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.work-list {
+  display: flex;
+  gap: 30px;
+}
 /*Team*/
 .team {
   background-color: var(--primery-background-color-section);
 }
+.team-list {
+  display: flex;
+  gap: var(--card-sed-gap);
+}
+.card-team {
+  padding: 30px 68px;
+  text-align: center;
+}
+
 .team-list-title {
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -157,10 +248,19 @@ ul {
   color: var(--primery-bgc-color);
 }
 .footer .logo {
+  display: block;
+  margin-bottom: 20px;
   color: var(--primery-bgc-color);
 }
+.footer-list {
+  display: flex;
+  gap: 9px;
+  flex-direction: column;
+}
+
 .footer-list .link,
 .adress-link {
+  display: block;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 14px;
@@ -181,6 +281,9 @@ address .link:focus {
 
 /*Portfolio*/
 .btn {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
   font-family: inherit;
   background-color: var(--primery-background-color-section);
   color: var(--title-text-color);
@@ -190,6 +293,13 @@ address .link:focus {
   line-height: 1.62;
   letter-spacing: 0.03em;
 }
+.buttons-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
@@ -197,8 +307,28 @@ address .link:focus {
 }
 
 /*Section-Portfolio*/
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: var(--card-sed-gap);
+}
+.portfolio-list > .portfolio-item {
+  flex-basis: calc((100%- var(--card-sed-gap) * (var(--items)-1)) / var(--items));
 
+  display: block;
+}
+.portfolio-item > .link {
+  display: block;
+}
+.portfolio-card {
+  padding: 54px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
 .portfolio-headline {
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
