@@ -13,14 +13,6 @@
 /*білий колір bgc/ --#FFFFFF*/
 /* accent-- #2196F3*/
 /*Основний колір текста-- #212121*/
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 body {
   font-family: Roboto, sans-serif;
@@ -141,17 +133,18 @@ img {
 }
 .adress-list {
   display: flex;
-}
-.link-mail {
-  margin-right: 50px;
+  gap: 50px;
 }
 
 /*Hero*/
 .hero {
   background-color: var(--color-footer-header);
   text-align: center;
+  padding: 200px 0;
 }
 .hero-title {
+  margin: 0 auto;
+  width: 696px;
   margin-bottom: 30px;
   color: var(--primery-bgc-color);
   font-weight: 900;
@@ -163,10 +156,10 @@ img {
 }
 .button {
   display: inline-block;
+  border: none;
   padding: 10px 32px;
   border-radius: 4px;
   background-color: var(--accent-color);
-  font-family: inherit;
   color: var(--primery-bgc-color);
   cursor: pointer;
   font-weight: 700;
@@ -201,6 +194,9 @@ img {
   letter-spacing: 0.03em;
 }
 /*Section work*/
+.work {
+  padding-top: 0;
+}
 .work-title,
 .team-title {
   margin-bottom: 50px;
@@ -218,14 +214,19 @@ img {
 /*Team*/
 .team {
   background-color: var(--primery-background-color-section);
+  padding-top: 0;
 }
 .team-list {
   display: flex;
   gap: var(--card-sed-gap);
 }
 .card-team {
-  padding: 30px 68px;
+  padding: 30px 0;
   text-align: center;
+  background: var(--primery-bgc-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-title {
@@ -245,17 +246,21 @@ img {
 /*footer*/
 .footer {
   background-color: var(--color-footer-header);
-  color: var(--primery-bgc-color);
+  padding: 60px 0;
 }
-.footer .logo {
+.footer-logo {
   display: block;
   margin-bottom: 20px;
   color: var(--primery-bgc-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.38;
+  letter-spacing: 0.03em;
+  text-decoration: none;
 }
-.footer-list {
-  display: flex;
-  gap: 9px;
-  flex-direction: column;
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-list .link,
@@ -273,7 +278,9 @@ address .link:focus {
 }
 .adress-link {
   color: var(--primery-bgc-color);
+  margin-top: 0;
 }
+
 .adress-link:hover,
 .adress-link:focus {
   color: var(--accent-color);
@@ -281,10 +288,9 @@ address .link:focus {
 
 /*Portfolio*/
 .btn {
-  display: inline-block;
   padding: 6px 22px;
   border-radius: 4px;
-  font-family: inherit;
+  border: none;
   background-color: var(--primery-background-color-section);
   color: var(--title-text-color);
   cursor: pointer;
@@ -310,8 +316,7 @@ address .link:focus {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
+
   gap: var(--card-sed-gap);
 }
 .portfolio-list > .portfolio-item {
@@ -323,7 +328,7 @@ address .link:focus {
   display: block;
 }
 .portfolio-card {
-  padding: 54px 24px;
+  padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
