@@ -70,7 +70,11 @@ img {
   padding-bottom: 94px;
 }
 
-/*Навігація header*/
+/*******************************Навігація header****************************/
+.site-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -136,7 +140,7 @@ img {
   gap: 50px;
 }
 
-/*Hero*/
+/********************************************Hero**********************************/
 .hero {
   background-color: var(--color-footer-header);
   text-align: center;
@@ -172,7 +176,7 @@ img {
 .button:focus {
   background-color: var(--background-color-btn);
 }
-/*Features*/
+/*******************************************Features***********************************/
 .features-list {
   display: flex;
   gap: 30px;
@@ -193,7 +197,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-/*Section work*/
+/*************************************************Section work********************************/
 .work {
   padding-top: 0;
 }
@@ -211,7 +215,7 @@ img {
   display: flex;
   gap: 30px;
 }
-/*Team*/
+/*****************************************************Team**********************************/
 .team {
   background-color: var(--primery-background-color-section);
   padding-top: 0;
@@ -243,7 +247,7 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-/*footer*/
+/**********************************************footer*************************************/
 .footer {
   background-color: var(--color-footer-header);
   padding: 60px 0;
@@ -286,7 +290,7 @@ address .link:focus {
   color: var(--accent-color);
 }
 
-/*Portfolio*/
+/*********************************************Portfolio********************************************/
 .btn {
   padding: 6px 22px;
   border-radius: 4px;
